@@ -1,0 +1,21 @@
+smax = 0
+a = []
+x = int(input())    # кол-во чисел
+for i in range(x):
+    n = int(input())
+    a.append(n)
+for q in range(len(a)-2):
+    for w in range(len(a)-1):
+        if q != w:
+            for e in range(len(a)):
+                if w != e:
+                    f = a[q]
+                    s = a[w]
+                    t = a[e]
+                    if (f + s) > t and (f + t) > s and (s + t) > f:
+                        p = (f + s + t) / 2
+                        plosh = (p * (p - f) * (p - s) * (p - t)) ** (0.5)
+                        if plosh > smax:
+                            smax = plosh
+                            print(f,s,t)
+print(smax)
