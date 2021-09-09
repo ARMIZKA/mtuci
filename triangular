@@ -6,9 +6,8 @@ for i in range(x):
     a.append(n)
 for q in range(len(a)-2):
     for w in range(len(a)-1):
-        if q != w:
             for e in range(len(a)):
-                if w != e:
+                if q!=w and w!=e and e!=q:
                     f = a[q]
                     s = a[w]
                     t = a[e]
@@ -17,5 +16,5 @@ for q in range(len(a)-2):
                         plosh = (p * (p - f) * (p - s) * (p - t)) ** (0.5)
                         if plosh > smax:
                             smax = plosh
-                            print(f,s,t)
-print(smax)
+                            print("Стороны треугольника:",f,s,t)
+print("Площадь самого большого треугольника:",smax)
