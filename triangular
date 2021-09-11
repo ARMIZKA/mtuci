@@ -4,8 +4,8 @@ x = int(input())    # кол-во чисел
 for i in range(x):
     n = int(input())
     a.append(n)
-for q in range(len(a)-2):
-    for w in range(len(a)-1):
+for q in range(len(a)):
+    for w in range(len(a)):
             for e in range(len(a)):
                 if q!=w and w!=e and e!=q:
                     f = a[q]
